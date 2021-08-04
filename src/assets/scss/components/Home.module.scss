@@ -1,0 +1,104 @@
+$primary: rgb(25, 92, 94);
+$dark:rgb(23, 43, 57);
+
+
+.socialIcons {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid $primary;
+}
+
+.printResume {
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        background: $primary;
+
+        i,
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.titleWhite {
+    color: #fff;
+
+    small {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+
+        div {
+            height: 2px;
+            width: 40px;
+            background: #fff;
+            margin-right: 12px;
+        }
+    }
+
+    h6 {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+    }
+}
+
+.titleDark {
+    color: $primary;
+
+    small {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+
+        div {
+            height: 2px;
+            width: 40px;
+            background: $primary;
+            margin-right: 12px;
+        }
+    }
+
+    h6 {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+    }
+}
+
+.about {
+    background: rgba(25, 92, 94, 0.7);
+    padding: 40px 0px;
+}
+
+.skills,
+.work {
+    padding: 40px 0px;
+}
+
+
+.aboutContent {
+    padding: 24px;
+}
+
+.footer {
+    background: $dark;
+    height: 120px;
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .aboutContent {
+        padding: 12px;
+
+        div {
+            p {
+                font-size: 0.1rem;
+            }
+        }
+    }
+}

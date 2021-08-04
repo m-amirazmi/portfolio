@@ -1,0 +1,141 @@
+$sidebarSmallWidth: 120px;
+$sidebarExpandWidth: 240px;
+$primary: rgb(25, 92, 94);
+$secondary: rgb(26, 177, 136);
+$dark:rgb(23, 43, 57);
+$darkSecondary: rgba(23, 43, 57, 0.5);
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebarContainer {
+    width: $sidebarSmallWidth;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+
+    .links {
+        transition: all 0.5s ease-in-out;
+
+        a {
+            padding: 10px 20px;
+        }
+    }
+
+    .link {
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+        width: $sidebarExpandWidth;
+
+        a {
+            color: #fff;
+            padding: 10px 20px;
+
+            &:hover {
+                border-radius: 4px;
+                background: rgba(26, 177, 136, 0.5);
+                padding: 10px 20px;
+                box-shadow: 1px 4px 8px 4px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .link {
+            display: inline;
+            margin-left: 12px;
+        }
+
+    }
+}
+
+.sidebar {
+    background-color: $primary;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    margin-left: $sidebarSmallWidth;
+    height: 100%;
+    width: 100%;
+}
+
+.brand {
+    background: rgba(23, 43, 57, 0.5);
+    text-align: center;
+}
+
+.brand,
+.links {
+    width: 100%;
+    padding: 20px 0px;
+    color: #fff;
+
+    h3 {
+        letter-spacing: 0.1rem;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .icons {
+        font-size: 1.2rem;
+    }
+
+    .link {
+        font-size: 1.2rem;
+    }
+
+}
+
+.links {
+    padding: 20px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mainBody {
+    min-height: 100vh;
+}
+
+.note {
+    position: fixed !important;
+    top: 24px;
+    z-index: 1000;
+}
+
+
+@media screen and (max-width: 576px) {
+    .sidebarContainer {
+        display: none;
+    }
+
+    .mainContainer {
+        margin-left: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .note {
+        top: 8px;
+        font-size: 0.9rem;
+        margin: 0px 20px;
+        text-align: center;
+    }
+
+}
